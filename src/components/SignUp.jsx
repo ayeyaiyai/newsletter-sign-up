@@ -3,6 +3,7 @@ import backgroundImage from '../images/illustration-sign-up-desktop.svg';
 import { useState } from 'react';
 
 function SignUp() {
+    // Declaring States
     const [userEmail, setUserEmail] = useState('');
     const [emailError, setEmailError] = useState(false);
     const [successfulEntry, setSuccessfulEntry] = useState(false);
