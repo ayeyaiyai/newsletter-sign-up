@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.sign-up-container {
+    display: flex;
+    width: 55%;
+    height: 80%;
+    background-color: white;
+    border-radius: 24px;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+.sign-up-left {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
+    color: #3d3d46;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sign-up-title {
+    color: #232743;
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.sign-up-subtitle {
+    font-size: .8em;
+    margin-bottom: 16px;
+}
+
+.check-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.checkmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 18px;
+    min-height: 18px;
+    color: white;
+    background-image: url('../images/icon-list.svg');
+    background-size: 100% 100%;
+    border-radius: 50px;
+    margin-right: 12px;
+}
+
+.check-list-text {
+    font-size: .8em;
+}
+
+.email-section-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: .7em;
+    margin-top: 32px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.email-header-right {
+    color: rgba(255, 0, 0, 0.747);
+    z-index: -5;
+}
+
+.visible {
+    z-index: 1;
+}
+
+.email-address {
+    width: 95%;
+    height: 36px;
+    border-radius: 6px;
+    border: 1px solid grey;
+    padding-left: 12px;
+    margin-bottom: 16px;
+}
+
+.email-address-error {
+    border: 1px solid rgba(255, 0, 0, 0.747);
+    background-color: rgba(255, 0, 0, 0.267);
+}
+
+.email-address-error::placeholder {
+    color: rgba(255, 0, 0, 0.747);
+}
+
+.confirm-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: none;
+    height: 40px;
+    color: white;
+    background-color: #232742;
+    width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.confirm-button:hover {
+    background-color: #11131f;
+}
+
+.sign-up-right {
+    display: flex;
+    justify-content: right;
+    height: 100%;
+    width: 60%;
+}
+
+.sign-up-image {
+    height: 100%;
+    width: 90%;
+}
+
+.sign-up-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
