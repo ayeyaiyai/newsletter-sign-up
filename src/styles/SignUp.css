@@ -12,6 +12,8 @@
     display: flex;
     width: 55%;
     height: 80%;
+    max-height: 600px;
+    max-width: 800px;
     background-color: white;
     border-radius: 24px;
     padding: 20px;
@@ -83,11 +85,12 @@
 }
 
 .email-address {
-    width: 95%;
+    box-sizing: border-box;
+    width: 100%;
     height: 36px;
     border-radius: 6px;
     border: 1px solid grey;
-    padding-left: 12px;
+    padding: 20px;
     margin-bottom: 16px;
 }
 
@@ -107,7 +110,7 @@
     align-items: center;
     border-radius: 6px;
     border: none;
-    height: 40px;
+    height: 42px;
     color: white;
     background-color: #232742;
     width: 100%;
@@ -130,12 +133,8 @@
 .sign-up-image {
     height: 100%;
     width: 90%;
-}
-
-.sign-up-image img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    background-image: url('../images/illustration-sign-up-desktop.svg');
+    background-size: cover;
     border-radius: 14px;
 }
 
@@ -165,4 +164,85 @@
 
 .success-button {
     height: 50px;
+}
+
+@media (min-width: 1400px) {
+    .sign-up-title {
+        font-size: 3.1em;
+    }
+
+    .sign-up-subtitle {
+        font-size: .88em;
+    }
+
+    .check-list-text {
+        font-size: .9em;
+    }
+}
+
+@media (max-width: 875px) {
+    .container {
+        background-color: white;
+        min-width: 375px;
+    }
+    .sign-up-container {
+        padding-top: 0px;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        width: 90%;
+    }
+
+    .sign-up-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0px 4px;
+    }
+
+    .sign-up-subtitle {
+        font-size: 1em;
+    }
+
+    .email-section-header {
+        background-color: white;
+    }
+
+    .check-list-item {
+        margin-bottom: 12px;
+    }
+
+    .check-list-text {
+        font-size: 1em;
+    }
+
+    .email-form {
+        width: 100%;
+    }
+
+    .email-address {
+        height: 54px;
+    }
+
+    .confirm-button {
+        font-size: 1em;
+        height: 54px;
+        margin-bottom: 16px;
+    }
+
+    .sign-up-right {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .sign-up-image {
+        width: 100%;
+        padding: 0;
+        background-image: url('../images/illustration-sign-up-mobile.svg');
+        background-size: cover;
+    }
 }
