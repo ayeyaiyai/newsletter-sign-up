@@ -23,10 +23,14 @@ function SignUp() {
                 setEmailError(true);
             } else {
                 setEmailError(false);
-                setUserEmail('');
                 setSuccessfulEntry(true);
             }
         }
+    }
+
+    function closeSuccessMessage() {
+        setUserEmail('');
+        setSuccessfulEntry(false);
     }
 
     function handleInputChange(event) {
@@ -39,6 +43,8 @@ function SignUp() {
             (   <div className='success-message-container'>
                     <div className='success-icon'><img src={successCheckmark} className='success-icon-image'/></div>
                     <div className='success-title'>Thanks for subscribing!</div>
+                    <div className='success-subtitle'>A confirmation email has been sent to <span className='user-email'>{userEmail}</span>. Please open it and click the button inside to confirm your subscription.</div>
+                    <button className='success-button' onClick={closeSuccessMessage}>Dismiss message</button>
                 </div>
             ) : (
                 <div className="sign-up-container">
