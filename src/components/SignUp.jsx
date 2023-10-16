@@ -48,11 +48,11 @@ function SignUp() {
                 </div>
             ) : (
                 <div className="sign-up-container">
-                <div className='sign-up-left'>
-                    <div className='sign-up-title'>Stay updated!</div>
-                    <div className='sign-up-subtitle'>Join 60,000+ product managers receiving monthly updates on:</div>
-                    <div className='check-list'>
-                        <div className='check-list-item'>
+                    <div className='sign-up-left'>
+                        <div className='sign-up-title'>Stay updated!</div>
+                        <div className='sign-up-subtitle'>Join 60,000+ product managers receiving monthly updates on:</div>
+                        <div className='check-list'>
+                            <div className='check-list-item'>
                             <div className='checkmark'></div>
                             <div className='check-list-text'>Product discovery and building what matters</div>
                         </div>
@@ -80,7 +80,7 @@ function SignUp() {
                     </form>
                 </div>
                 <div className='sign-up-right'>
-                    <div className='sign-up-image'><img src={backgroundImage} className='image-background' /></div>
+                    <div className='sign-up-image'></div>
                 </div>
             </div>
             )}
