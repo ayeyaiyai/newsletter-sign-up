@@ -1,5 +1,6 @@
 import '../styles/SignUp.css';
 import backgroundImage from '../images/illustration-sign-up-desktop.svg';
+import successCheckmark from '../images/icon-success.svg';
 import { useState } from 'react';
 
 function SignUp() {
@@ -33,42 +34,51 @@ function SignUp() {
     }
 
     return (
-        <div className="sign-up-container">
-            <div className='sign-up-left'>
-                <div className='sign-up-title'>Stay updated!</div>
-                <div className='sign-up-subtitle'>Join 60,000+ product managers receiving monthly updates on:</div>
-                <div className='check-list'>
-                    <div className='check-list-item'>
-                        <div className='checkmark'></div>
-                        <div className='check-list-text'>Product discovery and building what matters</div>
-                    </div>
-                    <div className='check-list-item'>
-                        <div className='checkmark'></div>
-                        <div className='check-list-text'>Measuring to ensure updates are a success</div>
-                    </div>
-                    <div className='check-list-item'>
-                        <div className='checkmark'></div>
-                        <div className='check-list-text'>And much more!</div>
-                    </div>
+        <div className='container'>
+            {successfulEntry ? 
+            (   <div className='success-message-container'>
+                    <div className='success-icon'><img src={successCheckmark} className='success-icon-image'/></div>
+                    <div className='success-title'>Thanks for subscribing!</div>
                 </div>
-                <div className='email-section-header'>
-                    <div className='email-header-left'>Email address</div>
-                    <div className={`email-header-right ${emailError ? 'visible' : ''}`}>Valid email required</div>
+            ) : (
+                <div className="sign-up-container">
+                <div className='sign-up-left'>
+                    <div className='sign-up-title'>Stay updated!</div>
+                    <div className='sign-up-subtitle'>Join 60,000+ product managers receiving monthly updates on:</div>
+                    <div className='check-list'>
+                        <div className='check-list-item'>
+                            <div className='checkmark'></div>
+                            <div className='check-list-text'>Product discovery and building what matters</div>
+                        </div>
+                        <div className='check-list-item'>
+                            <div className='checkmark'></div>
+                            <div className='check-list-text'>Measuring to ensure updates are a success</div>
+                        </div>
+                        <div className='check-list-item'>
+                            <div className='checkmark'></div>
+                            <div className='check-list-text'>And much more!</div>
+                        </div>
+                    </div>
+                    <div className='email-section-header'>
+                        <div className='email-header-left'>Email address</div>
+                        <div className={`email-header-right ${emailError ? 'visible' : ''}`}>Valid email required</div>
+                    </div>
+                    <form className='email-form' onSubmit={handleSubmit}>
+                        <input 
+                        className={`email-address ${emailError ? 'email-address-error' : ''}`}
+                        placeholder='email@company.com'
+                        value={userEmail}
+                        onChange={handleInputChange}>
+                        </input>
+                        <button className='confirm-button'>Subscribe to monthly newsletter</button>
+                    </form>
                 </div>
-                <form className='email-form' onSubmit={handleSubmit}>
-                    <input 
-                    className={`email-address ${emailError ? 'email-address-error' : ''}`}
-                    placeholder='email@company.com'
-                    value={userEmail}
-                    onChange={handleInputChange}>
-                    </input>
-                    <button className='confirm-button'>Subscribe to monthly newsletter</button>
-                </form>
-
+                <div className='sign-up-right'>
+                    <div className='sign-up-image'><img src={backgroundImage} className='image-background' /></div>
+                </div>
             </div>
-            <div className='sign-up-right'>
-                <div className='sign-up-image'><img src={backgroundImage} className='image-background' /></div>
-            </div>
+            )}
+  
         </div>
     )
 }
